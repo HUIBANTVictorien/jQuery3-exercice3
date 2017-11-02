@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="jquery-3.2.1.js"></script>
+  <meta charset="utf-8">
+  <title>exercice 3</title>
+</head>
+<body>
+  <button type="button" name="button">Click me</button>
+  <input type="text" id="number">
+  <script>
+  var randomNumber = Math.floor(Math.random() *100);
+var test = 0;
+$('button').click (function() {
+  test++
+  if ($.isNumeric($('#number').val())) {
+        if ($('#number').val() < randomNumber ) {
+          alert('Plus !');
+        } else if ($('#number').val() > randomNumber) {
+          alert('Moins !');
+        } else {
+          alert('Correcte ! \n Vous avez cliqué' + test + 'fois' );
+          }
+  } else {
+    alert("Ceci n'est pas un nombre")
+  }
+});
+  </script>
+</body>
+</html>
